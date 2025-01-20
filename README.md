@@ -27,3 +27,4 @@ source ~/.zshrc
 And that's it, ready to use, your terminal will look like this
 
 ![preview](./nekonight-zsh.jpg)
+![preview_2](./nekonight-zsh-moon.jpg)
