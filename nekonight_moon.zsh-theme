@@ -1,7 +1,8 @@
 #! zsh
 
 # nekonight-moon Zsh prompt with source control management and
-
+# Author: Bruno Ciccarino <brunociccarinoo@gmail.com>
+#
 # Demo:
 # ╭─🌙 virtualenv 🌙user at 🌙host in 🌙directory on (🌙branch {1} ↑1 ↓1 +1 •1 ⌀1 ✗)
 # ╰λ cd ~/path/to/your-directory
