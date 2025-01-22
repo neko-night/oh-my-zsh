@@ -8,20 +8,14 @@ Installing it is relatively simple, you just need to follow these steps:
 
 ```shell
 git clone https://github.com/neko-night/zsh
-
-cp nekonight.zsh-theme ~/.oh-my-zsh/themes
+cp zsh/nekonight.zsh-theme ~/.oh-my-zsh/themes
 ```
+``
 
-then open your zshrc file and type:
+then run the following command to set theme:
 
-```zsh 
-ZSH_THEME=nekonight
-```
-
-and then save and exit the file and type
-
-```zsh 
-source ~/.zshrc 
+```zsh
+omz theme set nekonight
 ```
 
 And that's it, ready to use, your terminal will look like this
