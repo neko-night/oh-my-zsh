@@ -11,16 +11,14 @@ icon_start="╭─"
 icon_user=" 🐱 %B%F{yellow}%n%f%b"
 icon_host=" at 🐱 %B%F{cyan}%m%f%b"
 icon_directory=" in 🐱 %B%F{magenta}%~%f%b"
-icon_branch=" on (🐱 $(git_prompt_info))"
 icon_end="╰─%Bλ%b"
 
 function git_prompt_info() {
   local branch_name=$(git symbolic-ref --short HEAD 2>/dev/null)
-  local git_status=""
   if [[ -n $branch_name ]]; then
-    git_status="$branch_name $(scm_git_status)"
+    local git_status="$branch_name $(scm_git_status)"
+    echo -n " on (🐱 $git_status)"
   fi
-  echo -n "$git_status"
 }
 
 function scm_git_status() {
@@ -32,5 +30,5 @@ function scm_git_status() {
   echo -n "$git_status"
 }
 
-PROMPT="${icon_start}${icon_user}${icon_host}${icon_directory}${icon_branch}
-${icon_end}"
+PROMPT='${icon_start}${icon_user}${icon_host}${icon_directory}$(git_prompt_info)
+${icon_end}'
